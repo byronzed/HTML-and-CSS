@@ -3,69 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekend Routine</title>
+    <title>Form Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #12e4b;
+            background-color: #29f4da;
             margin: 0;
             padding: 0;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            max-width: 500px;
             margin: 20px auto;
             background-color: #fff;
-            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        caption {
-            font-size: 1.2em;
+        label {
+            display: block;
+            margin-bottom: 5px;
             font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #333;
+        textarea {
+            height: 100px;
         }
-        th {
-            background-color: #333;
-            color: #fff;
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <!-- Each row represents a task/activity -->
-    <table>
-        <caption>Byron Zedrick's Weekend Routine</caption>
-        <tr>
-            <th>Time</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-        </tr>
-        <tr>
-            <td>Morning</td>
-            <td>Sleeping</td>
-            <td>Sleeping</td>
-        </tr>
-        <tr>
-            <td>Noon</td>
-            <td>Eating</td>
-            <td>Eating</td>
-        </tr>
-        <tr>
-            <td>Afternoon</td>
-            <td>Hanging with my friends</td>
-            <td>Going to Church</td>
-        </tr>
-        <tr>
-            <td>Evening</td>
-            <td>Playing Games</td>
-            <td>Hanging with my friends</td>
-        </tr>
-    </table>
+    <h1>Byron Zedrick Solina</h1>
+    <form action="thankyou.html" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
